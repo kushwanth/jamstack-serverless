@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>JAMstack ServerLess</title>
+  <meta name="description" content="JAMstack ServerLess" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/theme/css/styles.css" type="text/css" rel="stylesheet" />
+  <link href="/theme/images/icon.png" type="image/png" rel="icon">
+</head>
+<body class="container">
+<h1 class="display-3">JAMstack ServerLess</h1>
+  <article class="card">
+    <div class="card-body">
+      <p class="card-text">
+        <p>JAMstack ServerLess works Together</p>
+      </p>
+    <div class="container-fluid" id="review">
+      <p class="display-5">Share Your Feedback</p>
+      <form id="form" action="http://127.0.0.1:7071/api/email-review" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="John Doe" name="name">
+        </div>
+        <div class="mb-3">
+          <label for="review" class="form-label">Review</label>
+          <textarea class="form-control" id="review" rows="5" name="content"></textarea>
+        </div>
+        <input type="hidden" name="title" value="JAMstack ServerLess">
+        <button type="submit" class="btn btn-primary">Email</button>
+        </form>
+      <p class="lead" id="form-res"></p>
+    </div>
+  </article>
+<script src="/theme/js/review-email.js"></script>
+</body></html>
