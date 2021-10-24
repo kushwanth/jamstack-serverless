@@ -1,12 +1,12 @@
-import smtplib, ssl
+import smtplib, ssl, os
 import azure.functions as func
 
 def send_email(data):
     smtp_server = "smtp.gmail.com"
     port = 465
-    sender_email = "email"
-    receiver_email = "email"
-    password = "password"
+    sender_email = os.getenv("senderemail")
+    receiver_email = os.getenv("recieveremail")
+    password = os.getenv("password")
     ssl_context = ssl.create_default_context()
     try:
         email_server = smtplib.SMTP_SSL(smtp_server, port, context=ssl_context)
