@@ -201,7 +201,7 @@ snowballstemmer==2.1.0
 soupsieve==2.2.1
 SQLAlchemy==1.4.23
 sqlmap==1.5.8
-sqlparse==0.4.1
+sqlparse==0.4.2
 style50==2.7.5
 submit50==3.1.0
 systemd-python==234
