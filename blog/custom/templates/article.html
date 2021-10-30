@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="display-3">{{article.title}}</h1>
+  <article class="card">
+    <div class="card-body">
+      <p class="card-text">
+        {{article.content}}
+      </p>
+    <div class="container-fluid" id="review">
+      <p class="display-5">Share Your Feedback</p>
+      <form id="form" action="/api/email-review" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="John Doe" name="name">
+        </div>
+        <div class="mb-3">
+          <label for="review" class="form-label">Review</label>
+          <textarea class="form-control" id="review" rows="5" name="content"></textarea>
+        </div>
+        <input type="hidden" name="title" value="{{article.title}}">
+        <button type="submit" class="btn btn-primary">Email</button>
+        </form>
+      <p class="lead" id="form-res"></p>
+    </div>
+  </article>
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/review-email.js"></script>
+{% endblock content %}
